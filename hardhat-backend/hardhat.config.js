@@ -1,0 +1,16 @@
+require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config({ path: ".env" });
+
+const ALCHEMY_URL = process.env.ALCHEMY_URL;
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
+
+module.exports = {
+  solidity: "0.8.4",
+  networks: {
+    mumbai: {
+      url: ALCHEMY_URL,
+      accounts: [PRIVATE_KEY],
+    },
+  },
+};
+// 0xD7d33f1e118f458245a668ac7bA5484AF720BBEe
